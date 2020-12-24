@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Invisible Character</title>
+    <meta name="description" content="Invisible Characters, Empty Characters, Whitespaces & Blank Unicode Characters">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  </head>
+
+  <body>
+    <header>
+      <section class="hero is-info is-bold">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title is-1">Invisible Character</h1>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <h2 class="subtitle is-3">Invisible Characters</h2>
+            <p>Invisible characters, empty characters, blank characters, and whitespace characters. They look like a space, but are in fact a different (unicode) character. They can be used if you want to represent an empty space without using space. Let's say you want to use an empty value in a website or application, but spaces are not accepted. For this situation you can use one of the characters on this site. For example, sending an empty message, or setting a form value to blank. If the application filters out other unicode characters then the characters on this site might not work.</p>
+          </div>
+        </div>
+            <hr>
+            <div class ="card">
+              <div class="card-content">
+                <h3 class="subtitle is-3">Method 1 - Copy with a button</h3>
+                <p>Click the button below to copy an invisible character to your clipboard.</p>
+                <p>If this doesn't work on your device, use method 2.</p>
+                <br>
+                <a class="button is-large is-info" id="copyBtn" data-clipboard-text="&lrm;">
+                  <span class="icon is-medium">
+                    <i class="far fa-copy"></i>
+                  </span>
+                  <span>Copy to clipboard</span>
+                </a>
+                <br>
+                <div id="notificationArea"></div>
+              </div>
+            </div>
+
+            <hr>
+
+            <div class ="card">
+              <div class="card-content">
+                <h3 class="subtitle is-3">Method 2 - Copy manually</h3>
+                <p>If the first method does not work for you, try this method. You can test if it works below.</p>
+                <p>Select and copy the content of the blue-bordered textarea below.</p>
+                <p>You can use the Select button under the textarea, and then copy the selected text manually.</p>
+                <br>
+                <div class="control">
+                  <textarea id="method2TextArea" class="textarea has-fixed-size" readonly>&rlm;&rlm;&lrm; ‎</textarea>
+                <br>
+                <a class="button is-large is-info" onclick="selectText()">
+                    <span class="icon is-small">
+                      <i class="far fa-hand-pointer"></i>
+                    </span>
+                    <span>Select Text</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <hr>
+
+            <h3 class="subtitle is-3">Test it</h3>
+            <p>Paste the invisible character in the textarea below to test it. If it works, then the grey text should disappear.</p>
+            <br>
+            <textarea class="textarea has-fixed-size" placeholder="Paste the invisible character here to test it"></textarea>
+            <hr>
+
+            <h3 class="subtitle is-3">Unicode invisible characters</h3>
+            <p>Are you looking for other invisible or empty characters? Below is a list of different whitespace unicode characters. Select and copy them from between the blue brackets in the example column.</p>
+
+            <br>
+
+            <div class="columns">
+
+              <div class="column">
+
+            <table class="table is-bordered is-hoverable">
+              <thead>
+                <tr>
+                  <th>Unicode</th>
+                  <th>HTML</th>
+                  <th>Description</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>U+0020</td>
+                  <td>&amp#32</td>
+                  <td>Space</td>
+                  <td class="has-text-centered has-text-info">[<span>&#32;</span>]</td>
+                </tr>
+                <tr>
+                  <td>U+00A0</td>
+                  <td>&amp#160</td>
+                  <td>No-Break Space</td>
+                  <td class="has-text-centered has-text-info">[<span>&#160;</span>]</td>
+                </tr>
+                <tr>
+                  <td>U+2000</td>
+                  <td>&amp#8192</td>
+                  <td>En Quad</td>
+                  <td class="has-text-centered has-text-info">[<span>&#8192;</span>]</td>
+                </tr>
+                <tr>
+                  <td>U+2001</td>
+                  <td>&amp#8193</td>
+                  <td>Em Quad</td>
+                  <td class="has-text-centered has-text-info">[<span>&#8193;</span>]</td>
+                </tr>
+                <tr>
+                  <td>U+2002</td>
+                  <td>&amp#8194</td>
+                  <td>En Space</td>
+                  <td class="has-text-centered has-text-info">[<span>&#8194;</span>]</td>
+                </tr>
+                <tr>
+                  <td>U+2003</td>
+                  <td>&amp#8195</td>
+                  <td>Em Space</td>
+                  <td class="has-text-centered has-text-info">[<span>&#8195;</span>]</td>
+                </tr>
+                <tr>
+                  <td>U+2004</td>
+                  <td>&amp#8196</td>
+                  <td>Three-Per-Em Space</td>
+                  <td class="has-text-centered has-text-info">[<span>&#8196;</span>]</td>
+                </tr>
+                <tr>
+                  <td>U+2005</td>
+                  <td>&amp#8197</td>
+                  <td>Four-Per-Em Space</td>
+                  <td class="has-text-centered has-text-info">[<span>&#8197;</span>]</td>
+                </tr>
+                <tr>
+                  <td>U+2006</td>
+                  <td>&amp#8198</td>
+                  <td>Six-Per-Em Space</td>
+                  <td class="has-text-centered has-text-info">[<span>&#8198;</span>]</td>
+                </tr>
+                <tr>
+                  <td>U+2007</td>
+                  <td>&amp#8199</td>
+                  <td>Figure Space</td>
+                  <td class="has-text-centered has-text-info">[<span>&#8199;</span>]</td>
+                </tr>
+                <tr>
+                  <td>U+2008</td>
+                  <td>&amp#8200</td>
+                  <td>Punctuation Space</td>
+                  <td class="has-text-centered has-text-info">[<span>&#8200;</span>]</td>
+                </tr>
+                <tr>
+                  <td>U+2009</td>
+                  <td>&amp#8201</td>
+                  <td>Thin Space</td>
+                  <td class="has-text-centered has-text-info">[<span>&#8201;</span>]</td>
+                </tr>
+                <tr>
+                  <td>U+200A</td>
+                  <td>&amp#8202</td>
+                  <td>Hair Space</td>
+                  <td class="has-text-centered has-text-info">[<span>&#8202;</span>]</td>
+                </tr>
+                <tr>
+                  <td>U+2028</td>
+                  <td>&amp#8232</td>
+                  <td>Line Separator</td>
+                  <td class="has-text-centered has-text-info">[<span>&#8232;</span>]</td>
+                </tr>
+                <tr>
+                  <td>U+205F</td>
+                  <td>&amp#8287</td>
+                  <td>Medium Mathematical Space</td>
+                  <td class="has-text-centered has-text-info">[<span>&#8287;</span>]</td>
+                </tr>
+                <tr>
+                  <td>U+3000</td>
+                  <td>&amp#12288</td>
+                  <td>Ideographic Space</td>
+                  <td class="has-text-centered has-text-info">[<span>&#12288;</span>]</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            </div>
+
+          </div>
+
+
+            <hr>
+
+            <h3 class="subtitle is-3">More information</h3>
+            <p>Check out the <a href="https://en.wikipedia.org/wiki/Whitespace_character">Wikipedia page</a> about whitespace characters.</p>
+            <p>If you are looking for more information about Unicode invisible characters, check out <a href ="https://www.compart.com/en/unicode/category/Zs">this page</a>.</p>
+            <hr>
+
+      </div>
+    </section>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script>
+    var btn = document.getElementById('copyBtn');
+    var clipboard = new ClipboardJS(btn);
+    clipboard.on('success', function(e) {
+        if (!document.getElementById("copySuccessNotification")){
+          var copySuccessNotification = document.createElement("span");
+          copySuccessNotification.id = "copySuccessNotification";
+          copySuccessNotification.classList.add("tag");
+          copySuccessNotification.classList.add("is-success");
+          copySuccessNotification.textContent = "Copied to clipboard";
+          document.getElementById("notificationArea").appendChild(copySuccessNotification);
+        }
+    });
+    clipboard.on('error', function(e) {
+      if (!document.getElementById("copyFailedNotification")){
+          var copyFailedNotification = document.createElement("span");
+          copyFailedNotification.id = "copyFailedNotification";
+          copyFailedNotification.classList.add("tag");
+          copyFailedNotification.classList.add("is-warning");
+          copyFailedNotification.textContent = "Copying failed. Use method 2";
+          document.getElementById("notificationArea").appendChild(copyFailedNotification);
+        }
+    });
+
+    function selectText() {
+    const input = document.getElementById('method2TextArea');
+    input.focus();
+    input.select();
+    }
+    </script>
+  </body>
+</html>
